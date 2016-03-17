@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestResizeAnimationDirection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-7h-z1p">
+                                <rect key="frame" x="26" y="119" width="323" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="nkD-yn-RlN"/>
+                                    <constraint firstAttribute="width" constant="323" id="wjf-CG-l3B"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="UpLeft"/>
+                                    <segment title="UpRight"/>
+                                    <segment title="DownLeft"/>
+                                    <segment title="DownRight"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wjf-CG-l3B"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="L74-pf-E1E"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="mJT-bF-yGW">
+                                <rect key="frame" x="88" y="71" width="199" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Phh-uR-rY5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Up"/>
+                                    <segment title="Down"/>
+                                    <segment title="Left"/>
+                                    <segment title="Right"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Phh-uR-rY5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="2fg-NP-4Od"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-sv-YYw">
+                                <rect key="frame" x="148" y="28" width="79" height="30"/>
+                                <state key="normal" title="reset frame"/>
+                                <connections>
+                                    <action selector="onRestFrame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxP-Bd-Vg3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bZU-7h-z1p" firstAttribute="top" secondItem="mJT-bF-yGW" secondAttribute="bottom" constant="20" id="C6w-54-5bj"/>
+                            <constraint firstItem="n6P-sv-YYw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FZA-bM-feF"/>
+                            <constraint firstItem="mJT-bF-yGW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GAx-vE-WNo"/>
+                            <constraint firstItem="n6P-sv-YYw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Pt7-no-fWk"/>
+                            <constraint firstItem="bZU-7h-z1p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Trj-VH-vwe"/>
+                            <constraint firstItem="mJT-bF-yGW" firstAttribute="top" secondItem="n6P-sv-YYw" secondAttribute="bottom" constant="13" id="tBq-dq-8aC"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="multipleSC" destination="bZU-7h-z1p" id="rwO-Bj-06U"/>
+                        <outlet property="signleSC" destination="mJT-bF-yGW" id="e0j-eT-6iR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432.5" y="363.5"/>
+        </scene>
+    </scenes>
+</document>
